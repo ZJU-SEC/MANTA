@@ -66,3 +66,4 @@ COPY --from=builder /project-dir/build/kernel-bitcode/vmlinux.bc /
 
 RUN printf "#!/bin/sh\nopt -analyze -load=/usr/local/lib/libmemcg_bughunt.so -mergereturn -memcg-bughunt -o /dev/null vmlinux.bc" > run-manta.sh
 RUN chmod +x run-manta.sh
+COPY format-result.py /
