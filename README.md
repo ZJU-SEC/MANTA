@@ -26,7 +26,7 @@ The final results are in the file *result.txt*.
 
 Each item includes a missing account position followed by possible paths reaching syscall entries. BugLocation follows the LLVM output conventions for code location metadata. Each path in Paths starts from the buggy site and ends by a syscall.
 
-```json
+```
 Unaccounted allocation site: [BugLocation]
 Unaccounted paths found:
 [Paths]
