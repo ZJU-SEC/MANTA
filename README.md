@@ -14,7 +14,7 @@ docker run -ti manta-runner /bin/bash
 
 After invoking run-manta.sh, you need around 30-60 minutes to wait for the analysis to finish. The analysis results are included in the file *bughunt-result.txt*.
 
-The result includes many sites that are unreachable from syscalls. To filter these ones and format the result, run the following script in the container.
+The result includes many sites that are unreachable from syscalls. To filter these ones and format the result, run the following command in the container.
 
 ```bash
 python3 format-result.py
