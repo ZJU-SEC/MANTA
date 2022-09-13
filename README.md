@@ -5,14 +5,14 @@ The document describes the how to build and use MANTA’s static analysis tool t
 # Use MANTA
 
 ```bash
-docker pull manta-runner
-docker run -ti manta-runner /bin/bash
+docker pull nglaive/manta-runner:latest
+docker run -ti nglaive/manta-runner:latest /bin/bash
 ./run-manta.sh
 # wait for a few minutes ...
 # Display "MANTA analyzer for Linux missing-account bugs."
 ```
 
-After invoking run-manta.sh, you need around 30-60 minutes to wait for the analysis to finish. The analysis results are included in the file *bughunt-result.txt*.
+After invoking run-manta.sh, you need around 30-60 minutes to wait for the analysis to finish. When the analysis finishes, it prompts all the allocators are analyzed. It also reports a crash due to incompatible IR format, which can be *ignored*. The analysis results are included in the file *bughunt-result.txt*.
 
 The result includes many sites that are unreachable from syscalls. To filter these ones and format the result, run the following command in the container.
 
